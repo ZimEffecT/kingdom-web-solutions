@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- SEO -->
+<title>Services | Kingdom Web Solutions</title>
+<meta name="description" content="Explore our web design services including business websites and redesigns.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- LOADER -->
+<div id="loader"><h2>Kingdom Web Solutions</h2></div>
+
+<!-- HEADER -->
+<header class="hero-nav dark-nav">
+<h1>Kingdom Web Solutions</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<!-- SERVICES SECTION -->
+<section class="section fade-in">
+
+    <!-- HERO / INTRO -->
+    <div class="intro">
+        <h2>Professional Web Design Services</h2>
+        <p>
+            We build modern, fast, and mobile-friendly websites that help businesses
+            attract customers, build trust, and grow online in Eswatini.
+        </p>
+    </div>
+
+    <!-- SERVICES GRID -->
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&auto=format&fit=crop">
+            <h3>Business Websites</h3>
+            <p>Perfect for companies that need a strong online presence.</p>
+            
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=600&auto=format&fit=crop">
+            <h3>Website Redesign</h3>
+            <p>Transform outdated websites into modern, responsive platforms.</p>
+          
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop">
+            <h3>Starter Websites</h3>
+            <p>Affordable websites for startups and small businesses.</p>
+          
+        </div>
+
+    </div>
+
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="section light">
+
+<h2>Why Choose Us</h2>
+
+<div class="grid">
+
+<div class="card small">
+<h3>Fast Delivery</h3>
+<p>We deliver websites quickly without compromising quality.</p>
+</div>
+
+<div class="card small">
+<h3>Mobile Friendly</h3>
+<p>All websites work perfectly on phones, tablets, and desktops.</p>
+</div>
+
+<div class="card small">
+<h3>Affordable Pricing</h3>
+<p>Professional websites at prices suitable for local businesses.</p>
+</div>
+
+<div class="card small">
+<h3>Clean Code</h3>
+<p>Built using modern HTML & CSS for performance and reliability.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROCESS SECTION -->
+<section class="section fade-in">
+
+<h2>Our Process</h2>
+
+<div class="process">
+
+<div class="step">
+<h3>1. Consultation</h3>
+<p>We discuss your business needs and goals.</p>
+</div>
+
+<div class="step">
+<h3>2. Design</h3>
+<p>We create a clean and modern layout for your website.</p>
+</div>
+
+<div class="step">
+<h3>3. Development</h3>
+<p>We build your website using fast and reliable code.</p>
+</div>
+
+<div class="step">
+<h3>4. Launch</h3>
+<p>Your website goes live and starts attracting customers.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta">
+
+<h2>Ready to Grow Your Business Online?</h2>
+<p>Let’s build your website today.</p>
+
+<a href="contact.html" class="btn">Get Started</a>
+
+</section>
+
+<script>
+
+/* ===============================
+   LOADER
+================================= */
+window.addEventListener("load",()=>{
+ document.getElementById("loader").classList.add("hidden");
+ showOnScroll(); /* FIX: run animation immediately */
+});
+
+/* ===============================
+   MENU
+================================= */
+function toggleMenu(){
+ document.getElementById('nav').classList.toggle('active');
+}
+
+/* ===============================
+   SCROLL ANIMATION
+================================= */
+let elements = document.querySelectorAll('.fade-in');
+
+function showOnScroll(){
+ elements.forEach(el=>{
+  if(el.getBoundingClientRect().top < window.innerHeight - 100){
+    el.classList.add('show');
+  }
+ });
+}
+
+/* run on scroll */
+window.addEventListener('scroll', showOnScroll);
+
+
+</script>
+
+</body>
+</html>

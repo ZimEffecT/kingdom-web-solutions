@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- SEO -->
+<title>Web Design Eswatini | Kingdom Web Solutions</title>
+<meta name="description" content="Affordable web design services in Eswatini.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+<!-- ===============================
+     HERO
+================================= -->
+<!-- ===============================
+     ULTRA PREMIUM HERO
+================================= -->
+<!-- HERO SECTION -->
+<section class="hero">
+  <video autoplay muted loop class="hero-video">
+    <source src="videos/vid9.mp4" type="video/mp4">
+  </video>
+
+  <!-- FULL OVERLAY -->
+  <div class="hero-overlay"></div>
+
+  <!-- HERO CONTENT -->
+  <div class="hero-content">
+    <h1 class="hero-title">Kingdom Web Solutions</h1>
+    <p class="hero-subtitle">Professional Web Design in Eswatini</p>
+    <a class="btn" href="https://wa.me/26878141319">Get Started</a>
+  </div>
+
+  <!-- NAVIGATION (OPTIONAL) -->
+  <nav class="hero-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</section>
+
+
+<!-- ===============================
+     SERVICES (FIXED SECTION)
+================================= -->
+<section class="section fade-in">
+
+<h2 id="typing-text">Our Services</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="images/pic13.jpg" alt="Business website" loading="lazy">
+<p>Business Websites</p>
+</div>
+
+<div class="card">
+<img src="images/pic12.jpg" alt="Website redesign" loading="lazy">
+<p>Website Redesign</p>
+</div>
+
+<div class="card">
+<img src="images/picI.jpg" alt="Starter website" loading="lazy">
+<p>Starter Websites</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ===============================
+     TERMS & CONDITIONS
+================================= -->
+<section class="section fade-in">
+
+<h2 id="typing-text">Terms & Conditions</h2>
+
+<p>
+A 50% deposit is required before work begins. The remaining balance is paid after project completion.
+</p>
+
+<p
+>Including a E 500 per month maintainance fee. 
+</p>
+
+<p>
+Projects are completed within 1–2 weeks depending on requirements.
+</p>
+
+<p>
+Clients must provide all content (images, text, logos).
+</p>
+
+<p>
+We may showcase completed work in our portfolio.
+</p>
+
+</section>
+
+<!-- ===============================
+     FOOTER
+================================= -->
+<footer>
+<p>© 2026 Kingdom Web Solutions</p>
+</footer>
+
+<!-- ===============================
+     JAVASCRIPT
+================================= -->
+<script>
+
+/* LOADER */
+window.addEventListener("load",()=>{
+ document.getElementById("loader").classList.add("hidden");
+});
+
+/* MENU */
+function toggleMenu(){
+ document.getElementById('nav').classList.toggle('active');
+}
+
+/* SCROLL ANIMATION */
+let elements=document.querySelectorAll('.fade-in');
+
+function showOnScroll(){
+ elements.forEach(el=>{
+  if(el.getBoundingClientRect().top < window.innerHeight - 100){
+    el.classList.add('show');
+  }
+ });
+}
+
+/* run on scroll AND on load */
+window.addEventListener('scroll', showOnScroll);
+window.addEventListener('load', showOnScroll);
+
+// NAVBAR SCROLL EFFECT
+window.addEventListener("scroll", function(){
+  const header = document.querySelector("header");
+  header.classList.toggle("scrolled", window.scrollY > 50);
+});
+
+// TYPING EFFECT
+const text = "";
+let i = 0;
+
+function typeEffect(){
+  if(i < text.length){
+    document.getElementById("typing-text").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeEffect, 40);
+  }
+}
+
+window.onload = typeEffect;
+
+
+window.addEventListener("scroll", function(){
+  let nav = document.querySelector(".hero-nav");
+
+  if(window.scrollY > 50){
+    nav.style.background = "#0A1F44";
+  } else {
+    nav.style.background = "rgba(0,0,0,0.3)";
+  }
+});
+
+</script>
+
+</body>
+</html>

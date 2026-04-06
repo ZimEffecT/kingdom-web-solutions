@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- ===============================
+     SEO
+================================= -->
+<title>Portfolio | Kingdom Web Solutions</title>
+<meta name="description" content="View our portfolio of professional websites built for businesses in Eswatini.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- ===============================
+     LOADER
+================================= -->
+<div id="loader">
+  <h2>Kingdom Web Solutions</h2>
+</div>
+
+<!-- ===============================
+     HEADER
+================================= -->
+<header class="hero-nav dark-nav">
+
+<h1>Kingdom Web Solutions</h1>
+
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<nav id="nav">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+<!-- ===============================
+     PORTFOLIO SECTION
+================================= -->
+<section class="section fade-in">
+  <h2>Our Work</h2>
+
+  <div class="grid">
+
+    <!-- ===============================
+         PROJECT 1
+    ================================= -->
+    <div class="card portfolio-card">
+      <img src="images/picW.jpg" alt="Construction website" loading="lazy">
+
+      <div class="overlay">
+        <h3>Construction Company</h3>
+        <p>Modern website for a construction business</p>
+        <a class="btn" href="demos/construction/index.html" target="_blank">View Project</a>
+      </div>
+    </div>
+
+    <!-- ===============================
+         PROJECT 2
+    ================================= -->
+    <div class="card portfolio-card">
+      <img src="images/p2.jpg" alt="School website" loading="lazy">
+
+      <div class="overlay">
+        <h3>School Website</h3>
+        <p>Clean and informative school platform</p>
+        <a class="btn" href="demos/school/index.html" target="_blank">View Project</a>
+      </div>
+    </div>
+
+    <!-- ===============================
+         PROJECT 3
+    ================================= -->
+    <div class="card portfolio-card">
+      <img src="images/P3.jpg" alt="Restaurant website" loading="lazy">
+
+      <div class="overlay">
+        <h3>Restaurant Website</h3>
+        <p>Attractive food and menu showcase</p>
+        <a class="btn" href="demos/restaurant/index.html" target="_blank">View Project</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===============================
+     CALL TO ACTION
+================================= -->
+<section class="section fade-in">
+
+<h2>Want a Website Like This?</h2>
+
+<p>We design modern, fast and professional websites for businesses in Eswatini.</p>
+
+<a class="btn" href="https://wa.me/26878141319">Start Your Project</a>
+
+</section>
+
+<!-- ===============================
+     FOOTER
+================================= -->
+<footer>
+<p>© 2026 Kingdom Web Solutions</p>
+</footer>
+
+<!-- ===============================
+     JAVASCRIPT
+================================= -->
+<script>
+
+/* ===============================
+   LOADER
+================================= */
+window.addEventListener("load",()=>{
+ document.getElementById("loader").classList.add("hidden");
+ showOnScroll(); /* FIX: ensures content shows immediately */
+});
+
+/* ===============================
+   MOBILE MENU
+================================= */
+function toggleMenu(){
+ document.getElementById('nav').classList.toggle('active');
+}
+
+/* ===============================
+   SCROLL ANIMATION
+================================= */
+let elements = document.querySelectorAll('.fade-in');
+
+function showOnScroll(){
+ elements.forEach(el=>{
+  if(el.getBoundingClientRect().top < window.innerHeight - 100){
+    el.classList.add('show');
+  }
+ });
+}
+
+/* run on scroll */
+window.addEventListener('scroll', showOnScroll);
+
+</script>
+
+</body>
+</html>

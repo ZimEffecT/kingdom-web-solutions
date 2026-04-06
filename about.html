@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- SEO -->
+<title>About Us | Kingdom Web Solutions</title>
+<meta name="description" content="Learn about Kingdom Web Solutions and how we help businesses grow online.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- ===============================
+     LOADER (shows while page loads)
+================================= -->
+<div id="loader">
+  <h2>Kingdom Web Solutions</h2>
+</div>
+
+<!-- ===============================
+     HEADER / NAVIGATION
+================================= -->
+<header class="hero-nav dark-nav">
+<h1>Kingdom Web Solutions</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<!-- ===============================
+     ABOUT SECTION
+================================= -->
+<!-- ===============================
+     ABOUT SECTION (STRONG VERSION)
+================================= -->
+<section class="section fade-in">
+
+<h2>About Kingdom Web Solutions</h2>
+
+<!-- INTRO -->
+<p>
+At Kingdom Web Solutions, we help businesses in Eswatini build a strong and professional online presence.
+We specialize in creating modern, fast, and mobile-friendly websites that attract customers and grow your business.
+</p>
+
+<!-- VALUE -->
+<p>
+We understand that many businesses struggle to stand out online. That’s why we focus on designing websites that are not only visually appealing but also optimized for performance and results.
+</p>
+
+<!-- TRUST -->
+<p>
+Our approach is simple: clean design, fast performance, and user-focused experience. Whether you're a small business, startup, or growing brand, we create solutions tailored to your needs.
+</p>
+
+<!-- MISSION -->
+<p>
+Our mission is to empower businesses in Eswatini with high-quality websites that compete at a global standard.
+</p>
+
+<!-- ABOUT IMAGE -->
+<div class="grid">
+
+<div class="card">
+<img src="images/picR.jpg" alt="Web design work" loading="lazy">
+<p>Professional Design</p>
+</div>
+
+<div class="card">
+<img src="images/picJ.jpg" alt="Fast websites" loading="lazy">
+<p>Fast Performance</p>
+</div>
+
+<div class="card">
+<img src="images/picS.jpg" alt="Business growth" loading="lazy">
+<p>Business Growth</p>
+</div>
+
+</div>
+
+<!-- CALL TO ACTION -->
+<a class="btn" href="https://wa.me/26878141319">Work With Us</a>
+
+</section>
+
+<!-- ===============================
+     JAVASCRIPT
+================================= -->
+<script>
+
+/* LOADER */
+window.addEventListener("load",()=>{
+ document.getElementById("loader").classList.add("hidden");
+ showOnScroll(); /* FIX: run animation on load */
+});
+
+/* MENU */
+function toggleMenu(){
+ document.getElementById('nav').classList.toggle('active');
+}
+
+/* SCROLL ANIMATION */
+let elements=document.querySelectorAll('.fade-in');
+
+function showOnScroll(){
+ elements.forEach(el=>{
+  if(el.getBoundingClientRect().top < window.innerHeight - 100){
+    el.classList.add('show');
+  }
+ });
+}
+
+/* run on scroll */
+window.addEventListener('scroll', showOnScroll);
+
+
+</script>
+</body>
+</html>
